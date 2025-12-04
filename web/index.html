@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDev Solutions - Desarrollo Web Profesional</title>
+    <title>Semala Webs - Desarrollo Web Profesional</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,7 +14,7 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>WebDev Solutions</h2>
+                    <h2>Semala Webs</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
@@ -35,7 +35,7 @@
     <section id="inicio" class="hero">
         <div class="hero-container">
             <div class="hero-content scroll-animate fade-in-left">
-                <h1 class="hero-title">¿Quieres un web como esta?</h1>
+                <h1 class="hero-title">¿Tu web es del siglo pasado? ¿Quieres una como esta?</h1>
                 <p class="hero-description">
                     Creamos sitios web modernos, rápidos y optimizados que impulsan tu negocio hacia el éxito digital.
                 </p>
@@ -56,51 +56,38 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header scroll-animate fade-in-up">
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones web completas para tu negocio</p>
+                <h2>Nuestros Planes</h2>
+                <p>Elige el plan perfecto para ti</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
+            
+            <div class="plans-grid plans-two">
+                <!-- Plan: Web -->
+                <div class="plan-card scroll-animate fade-in-up">
+                    <div class="plan-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Desarrollo Web</h3>
-                    <p>Sitios web personalizados, rápidos y optimizados para todos los dispositivos.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                    <h3 class="plan-name">Web</h3>
+                    <div class="plan-price">
+                        <span class="currency">€</span>
+                        <span class="amount">299</span>
+                        <span class="period">/único</span>
                     </div>
-                    <h3>Diseño Responsivo</h3>
-                    <p>Diseños que se adaptan perfectamente a móviles, tablets y escritorio.</p>
+                    <a href="#contacto" class="btn btn-plan">Elegir Plan</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
+
+                <!-- Plan: Web + Dominio -->
+                <div class="plan-card featured scroll-animate fade-in-up">
+                    <div class="plan-badge popular">Popular</div>
+                    <div class="plan-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <h3>SEO Optimización</h3>
-                    <p>Optimizamos tu sitio para aparecer en los primeros resultados de Google.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                    <h3 class="plan-name">Web + Dominio</h3>
+                    <div class="plan-price">
+                        <span class="currency">€</span>
+                        <span class="amount">329</span>
+                        <span class="period">/único</span>
                     </div>
-                    <h3>E-commerce</h3>
-                    <p>Tiendas online completas con sistemas de pago seguros y gestión de inventario.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Mantenimiento</h3>
-                    <p>Servicio de mantenimiento continuo para mantener tu sitio actualizado y seguro.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Optimización</h3>
-                    <p>Mejoramos la velocidad y rendimiento de tu sitio web existente.</p>
+                    <a href="#contacto" class="btn btn-plan btn-featured">Elegir Plan</a>
                 </div>
             </div>
         </div>
@@ -196,7 +183,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>WebDev Solutions</h3>
+                    <h3>Semala Webs</h3>
                     <p>Desarrollando el futuro digital, un proyecto a la vez.</p>
                 </div>
                 <div class="footer-section">
@@ -215,12 +202,28 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 WebDev Solutions. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Semala Webs. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
         // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
